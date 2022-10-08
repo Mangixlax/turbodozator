@@ -1,0 +1,96 @@
+// @import '~vue-slider-component/lib/theme/default.scss';
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif !important;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  position: relative;
+  background: #fff;
+  z-index: 0;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body,
+#__nuxt,
+#__layout {
+  min-height: 100vh;
+  min-width: 320px;
+}
+
+body {
+  padding-right: var(--modal-padding, 0);
+}
+
+input, textarea, button {
+  outline: none;
+}
+
+html.modal-is-open, html.modal-is-open body,
+html.open-mobile-menu,
+html.open-mobile-menu body {
+  overflow: hidden; 
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition-property: opacity;
+  transition-timing-function: ease-in;
+  transition-duration: 200ms;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+/* Page transition*/
+//.page-enter-active, .page-leave-active
+//  transition: opacity .5s
+//
+//.page-enter, .page-leave-active
+//  opacity: 0
+
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: opacity .3s ease;
+}
+
+.component-fade-enter, .component-fade-leave-to {
+  opacity: 0;
+}
+/* .component-fade-leave-active below version 2.1.8 */ 
+
+.mobile__menu-enter-active,
+.mobile__menu-leave-active {
+  transition: all 0.3s ease;
+}
+
+.mobile__menu-enter,
+.mobile__menu-leave-active {
+  transform: translateX(-100vw);
+}
+
+//Mobile sidebar overlay animation
+.mobile__menu-overlay-enter-active, .mobile__menu-overlay-leave-active {
+  transition: opacity .3s;
+}
+
+.mobile__menu-overlay-enter, .mobile__menu-overlay-leave-active {
+  opacity: 0;
+}
