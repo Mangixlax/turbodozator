@@ -12,6 +12,7 @@
         [$style['button--sm']]: props.variant === 'sm',
         [$style['button--md']]: props.variant === 'md',
         [$style['button--xl']]: props.variant === 'xl',
+        [$style['button--red']]: props.color === 'red',
         [$style['button--with-blink']]: props.withBlink,
         [$style['button--full-size']]: props.fullSize,
         [$style['button--disable-hover']]: props.disableHover,
@@ -52,6 +53,9 @@ export default class UiFormButton extends Vue {
   @Prop({ type: String, default: 'sm' })
   variant!: string
 
+  @Prop({ type: String, default: '' })
+  color!: string
+
   @Prop({ type: [String, Array], default: '' })
   textClasses!: string | string[]
 
@@ -84,7 +88,7 @@ export default class UiFormButton extends Vue {
   border: none;
   justify-content: center;
   padding: 15px 20px;
-  background-color: $color-yellow-100;
+  background-color: $color-blue-100;
   min-height: 42px;
   position: relative;
   transition: transform 0.25s ease-out;
@@ -92,6 +96,7 @@ export default class UiFormButton extends Vue {
   color: $color-white-100;
   text-decoration: none;
   @include size-button;
+  border-radius: 30px;
   
   &--xl {
     padding: 24px 32px;
@@ -105,6 +110,10 @@ export default class UiFormButton extends Vue {
     padding: 8px 16px
   }
 
+  &--red {
+    background-color: $color-red-100;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -113,7 +122,7 @@ export default class UiFormButton extends Vue {
     bottom: 0;
     top: 0;
     background-color: transparent;
-    border-radius: 9px;
+    border-radius: 30px;
     transition: background-color 0.25s ease;
     z-index: -1;
   }

@@ -90,21 +90,26 @@ export default class BaseHeader extends Vue {
   }
 
   public headerMenu: Array<IHeaderMenuItem> = [
+
     {
-      label: 'Блог',
+      label: 'ТДЗ',
       route: { name: 'index' },
     },
     {
-      label: 'Портфолио',
-      route: { name: 'portfolio' },
+      label: 'Преимущества',
+      route: { name: 'index', hash: '#benefits' },
     },
     {
-      label: 'Обо мне',
-      route: { name: 'about' },
+      label: 'Тех. характеристики',
+      route: { name: 'index', hash: '#technical' },
+    },
+    {
+      label: 'Партнеры',
+      route: { name: 'index', hash: '#partners' },
     },
     {
       label: 'Контакты',
-      route: { name: 'contacts' },
+      route: { name: 'index', hash: '#contacts' },
     },
   ]
 

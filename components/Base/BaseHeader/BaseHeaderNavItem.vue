@@ -92,7 +92,7 @@ export default class BaseHeaderNavItem extends Vue {
   }
 
   &-link {
-    @include size-h3-semi-bold;
+    @include size-h3-regular;
     text-decoration: none;
     color: $color-white-100;
     display: flex;

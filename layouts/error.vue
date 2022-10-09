@@ -143,7 +143,7 @@ export default Vue.extend({
   }
 
   ul {
-    @include size-h2-regular;
+    @include size-h2;
     list-style: none;
     padding-left: 34px;
     margin-top: 0;

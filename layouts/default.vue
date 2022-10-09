@@ -5,7 +5,6 @@
     <!--    <lazy-hydrate when-visible>-->
     <!--      <base-seo-text />-->
     <!--    </lazy-hydrate>-->
-    <base-devider />
     <base-footer />
   </div>
 </template>

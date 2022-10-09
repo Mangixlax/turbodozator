@@ -48,19 +48,23 @@
 
 /*  Fonts */
 @mixin size-h1-big {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans';
   font-style: normal;
-  font-weight: 500;
-  font-size: 45px;
-  line-height: 65px;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 64px;
+  text-align: center;
+  letter-spacing: 0.2px;
 }
 
 @mixin size-h1-small {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans';
   font-style: normal;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 50px;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+
 }
 
 @mixin size-h1-small-bold {
@@ -80,35 +84,34 @@
 }
 
 @mixin size-h2 {
-  font-family: 'Noto Sans', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 36px;
-}
-
-@mixin size-h2-small-regular {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 48px;
+  line-height: 55px;
+  text-align: center;
+  letter-spacing: 0.2px;
 }
 
 @mixin size-h2-regular {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 48px;
+  line-height: 55px;
+  text-align: center;
+  letter-spacing: 0.2px;
 }
 
 @mixin size-h3-regular {
   font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.2px;
+
 }
 
 @mixin size-h3-medium {
@@ -120,23 +123,32 @@
 }
 
 @mixin size-h3-semi-bold {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
-  line-height: 36px;
-
-  // @media (max-width: 767px) {
-  //   line-height: 24px;
-  // }
+  font-size: 28px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
 }
 
 @mixin size-body-text {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.2px;
+}
+
+@mixin size-body-big-text {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: 0.2px;
 }
 
 @mixin size-body-tiny-text {
