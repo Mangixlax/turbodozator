@@ -1,9 +1,6 @@
 <template>
   <nuxt-link
-    :to="{
-      name: route.name,
-      params: route.params,
-    }"
+    :to="route"
     :class="{
       [$style['link']]: true,
       [$style['icon--primary']]: iconColor === 'primary',

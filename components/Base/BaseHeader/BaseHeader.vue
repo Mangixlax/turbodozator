@@ -118,7 +118,7 @@ export default class BaseHeader extends Vue {
       type: 'link',
       icon: 'about',
       iconColor: 'yellow',
-      route: { name: 'index', hash: '' },
+      route: { name: 'index', hash: '#tdz' },
     },
     {
       label: 'Преимущества',
