@@ -10,7 +10,7 @@
         </span>
         <ui-form-button :color="'red'">Узнать больше</ui-form-button>
       </div>
-      <img :src="$img('main-screen/main-screen-bg.png')" alt="турбодозатор" :class="$style['main-screen__bg']">
+      <img :src="require('@/assets/images/main-screen/main-screen-bg.png')" alt="турбодозатор" :class="$style['main-screen__bg']">
     </div>
   </div>
 </template>
