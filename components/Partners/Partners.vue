@@ -1,16 +1,16 @@
 <template>
-  <div :class="$style['main-screen']">
-    <div :class="$style['main-screen__container']">
-      <div :class="$style['main-screen__info']">
-        <h1 :class="$style['main-screen__info-title']">
+  <div :class="$style['partners']">
+    <div :class="$style['partners__container']">
+      <!-- <div :class="$style['partners__info']">
+        <h1 :class="$style['partners__info-title']">
           ТУРБОДОЗАТОР ТДЗ
         </h1>
-        <span :class="$style['main-screen__info-description']">
+        <span :class="$style['partners__info-description']">
           Лучшее решение среди дозаторов пенообразователя
         </span>
         <ui-form-button :color="'red'">Узнать больше</ui-form-button>
       </div>
-      <img :src="require('@/assets/images/main-screen/main-screen-tdz.png')" alt="турбодозатор" :class="$style['main-screen__bg']">
+      <img :src="require('@/assets/images/partners/partners-tdz.png')" alt="турбодозатор" :class="$style['partners__bg']"> -->
     </div>
   </div>
 </template>
@@ -25,20 +25,16 @@ import UiFormButton from '~/components/Ui/Form/UiFormButton.vue'
     UiFormButton
   }
 })
-export default class MainScreen extends Vue {}
+export default class Partners extends Vue {}
 </script>
 
 <style lang="scss" module>
-.main-screen {
+.partners {
   width: 100%;
-  background: url('@/assets/images/main-screen/main-screen-bg.jpg');
-  padding: 90px 0px;
-  height: calc(100vh - 90px);
   background-size: cover;
 
   &__container {
     max-width: 1200px;
-    height: 100%;
     margin: 0 auto;
     padding: 0 20px;
     position: relative;
@@ -74,21 +70,14 @@ export default class MainScreen extends Vue {}
   }
 
   @media (max-width: 768px) {
-    padding: 32px 0px;
 
     &__info {
-      padding-bottom: initial;
-
       &-title {
         @include size-h1-small
       }
-
-      &-description {
-        margin-bottom: 32px;
-      }
     }
     &__bg {
-      width: 365px;
+      width: 450px;
     }
   }
 }

@@ -28,27 +28,27 @@ export default class BaseFooterIcons extends Vue {
   public icons: Array<IIcon> = [
     {
       name: 'vk',
-      href: 'https://vk.com/club60815620',
+      href: '',
       title: 'Я в Вк',
     },
     {
       name: 'google',
-      href: 'mailto: info@turbodozator.ru',
+      href: '',
       title: 'Я в Google',
     },
     {
       name: 'telegram',
-      href: 'https://telegram.me/+79168097410',
+      href: '',
       title: 'Я в Telegram',
     },
     {
       name: 'whatsapp',
-      href: 'https://wa.me/+79168097410',
+      href: '',
       title: 'Я в Whatsapp',
     },
     {
       name: 'discord',
-      href: 'https://discordapp.com/users/1026267551845585016',
+      href: '',
       title: 'Я в Discord',
     },
   ]

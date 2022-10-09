@@ -90,7 +90,6 @@ export default class BaseHeader extends Vue {
   }
 
   public headerMenu: Array<IHeaderMenuItem> = [
-
     {
       label: 'ТДЗ',
       route: { name: 'index' },
@@ -115,32 +114,40 @@ export default class BaseHeader extends Vue {
 
   public headerMobileMenu: Array<IHeaderMobileMenuItem> = [
     {
-      label: 'Блог',
-      type: 'link',
-      icon: 'blog',
-      iconColor: 'yellow',
-      route: { name: 'index' },
-    },
-    {
-      label: 'Портфолио',
-      type: 'link',
-      icon: 'portfolio',
-      iconColor: 'yellow',
-      route: { name: 'portfolio' },
-    },
-    {
-      label: 'Обо мне',
+      label: 'ТДЗ',
       type: 'link',
       icon: 'about',
       iconColor: 'yellow',
-      route: { name: 'about' },
+      route: { name: 'index', hash: '' },
     },
+    {
+      label: 'Преимущества',
+      type: 'link',
+      icon: 'about',
+      iconColor: 'yellow',
+      route: { name: 'index', hash: '#benefits' },
+    },
+    {
+      label: 'Тех. характеристики',
+      type: 'link',
+      icon: 'about',
+      iconColor: 'yellow',
+      route: { name: 'index', hash: '#technical' },
+    },
+    {
+      label: 'Партнеры',
+      type: 'link',
+      icon: 'contacts',
+      iconColor: 'yellow',
+      route: { name: 'index', hash: '#partners' },
+    },
+
     {
       label: 'Контакты',
       type: 'link',
       icon: 'contacts',
       iconColor: 'yellow',
-      route: { name: 'contacts', params: { type: 'developers' } },
+      route: { name: 'index', hash: '#contacts' },
     },
   ]
 

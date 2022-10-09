@@ -15,7 +15,7 @@
           </nuxt-link>
         </nav>
         <div :class="$style['footer__left-text']">
-          © {{ getFullYear }} - Учись говорить правильно вместе с LogoLion.
+          © {{ getFullYear }} - ТЗД - выбор №1 в сфере пожаробезопаности.
         </div>
       </div>
       <div :class="$style['footer__right']">
@@ -25,7 +25,7 @@
           </div>
           <div :class="$style['footer__subscribe-description']">
             {{
-              "Чтобы получать уведомления о скидках на занятия, не забудь подписаться :)"
+              "Подпишись на новости и будь в курсе развития проекта "
             }}
           </div>
           <div :class="$style['footer__subscribe-form']">
@@ -36,9 +36,10 @@
             />
             <ui-form-button
               :variant="'sm'"
+              square
               :class="$style['footer__subscribe-button']"
             >
-              Вперед!
+              Подписатья
             </ui-form-button>
           </div>
           <span :class="$style['footer__subscribe-error']">
@@ -51,7 +52,7 @@
           </span>
         </div>
         <div :class="$style['footer__socials']">
-          <div :class="$style['footer__socials-title']">Мои соцсети</div>
+          <div :class="$style['footer__socials-title']">Наши соцсети</div>
           <base-footer-icons class="$style['footer__socials-icons']" />
         </div>
       </div>
@@ -93,20 +94,24 @@ interface Form {
 export default class BaseFooter extends Vue {
   public footerMenu: Array<object> = [
     {
-      label: "Блог",
-      route: { name: "index" },
+      label: 'ТДЗ',
+      route: { name: 'index' },
     },
     {
-      label: "Портфолио",
-      route: { name: "portfolio" },
+      label: 'Преимущества',
+      route: { name: 'index', hash: '#benefits' },
     },
     {
-      label: "Обо мне",
-      route: { name: "about" },
+      label: 'Тех. характеристики',
+      route: { name: 'index', hash: '#technical' },
     },
     {
-      label: "Контакты",
-      route: { name: "contacts" },
+      label: 'Партнеры',
+      route: { name: 'index', hash: '#partners' },
+    },
+    {
+      label: 'Контакты',
+      route: { name: 'index', hash: '#contacts' },
     },
   ];
 
@@ -165,7 +170,7 @@ export default class BaseFooter extends Vue {
     margin-bottom: 24px;
 
     &-link {
-      @include size-h3-semi-bold;
+      @include size-h3-regular;
       text-decoration: none;
       color: $color-black-100;
       position: relative;

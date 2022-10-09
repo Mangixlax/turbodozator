@@ -13,6 +13,7 @@
         [$style['button--md']]: props.variant === 'md',
         [$style['button--xl']]: props.variant === 'xl',
         [$style['button--red']]: props.color === 'red',
+        [$style['button--square']]: props.square,
         [$style['button--with-blink']]: props.withBlink,
         [$style['button--full-size']]: props.fullSize,
         [$style['button--disable-hover']]: props.disableHover,
@@ -50,7 +51,7 @@ export default class UiFormButton extends Vue {
   @Prop({ type: String, default: 'button' })
   tag!: string
 
-  @Prop({ type: String, default: 'sm' })
+  @Prop({ type: String, default: 'md' })
   variant!: string
 
   @Prop({ type: String, default: '' })
@@ -65,6 +66,9 @@ export default class UiFormButton extends Vue {
   @Prop({ type: Boolean, default: false })
   disabled!: boolean
 
+  @Prop({ type: Boolean, default: false })
+  square!: boolean
+  
   @Prop({ type: Boolean, default: false })
   fullSize!: boolean
 
@@ -111,7 +115,11 @@ export default class UiFormButton extends Vue {
   }
 
   &--red {
-    background-color: $color-red-100;
+    background-color: $red;
+  }
+
+  &--square {
+    border-radius: 4px;
   }
 
   &::before {

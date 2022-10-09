@@ -27,6 +27,7 @@ export default class benefitsCard extends Vue {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 12px 24px;
 
   &__icon {
     height: 72px;
@@ -46,6 +47,10 @@ export default class benefitsCard extends Vue {
     margin: 0;
     margin-bottom: 20px;
     color: $color-black-72;
+  }
+
+  @media (max-width: 1024px) {
+    border: solid 1px $color-blue-100
   }
 }
 </style>

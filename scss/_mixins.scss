@@ -53,7 +53,6 @@
   font-weight: 400;
   font-size: 60px;
   line-height: 64px;
-  text-align: center;
   letter-spacing: 0.2px;
 }
 
@@ -89,8 +88,16 @@
   font-weight: 400;
   font-size: 48px;
   line-height: 55px;
-  text-align: center;
   letter-spacing: 0.2px;
+}
+
+@mixin size-h2-small {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 28px;
+  letter-spacing: 0.1px;
 }
 
 @mixin size-h2-regular {
@@ -99,7 +106,6 @@
   font-weight: 400;
   font-size: 48px;
   line-height: 55px;
-  text-align: center;
   letter-spacing: 0.2px;
 }
 
@@ -108,10 +114,17 @@
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  line-height: 28px;
-  text-align: center;
+  line-height: 34px;
   letter-spacing: 0.2px;
+}
 
+@mixin size-h3-small {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 34px;
+  letter-spacing: 0.2px;
 }
 
 @mixin size-h3-medium {
@@ -128,7 +141,6 @@
   font-weight: 600;
   font-size: 28px;
   line-height: 40px;
-  text-align: center;
   letter-spacing: 0.2px;
   text-transform: capitalize;
 }

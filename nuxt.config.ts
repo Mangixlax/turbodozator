@@ -6,10 +6,6 @@ export default {
   
   target: "static",
 
-  router: {
-    base: '/turbodozator/'
-  },
-
   server: {
     host: process.env.HOST || "0.0.0.0",
     port: process.env.PORT || 3000,
@@ -134,6 +130,17 @@ export default {
     plugins: ["utc", "timezone"],
   },
 
+  router: {
+    base: '/turbodozator/',
+    scrollBehavior(to: any, from: any, savedPosition: any) {
+      if (to.hash) {
+        return window.scrollTo({
+          top: document.querySelector(to.hash).offsetTop - 20,
+          behavior: "smooth",
+        });
+      }
+    },
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 };

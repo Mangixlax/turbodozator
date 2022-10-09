@@ -113,7 +113,7 @@ export default class UiMenuDropdown extends Vue {
   }
 
   &__label {
-    @include size-h3-semi-bold;
+    @include size-h3-regular;
     color: $color-blue-100;
     margin: 0;
     margin-right: auto;

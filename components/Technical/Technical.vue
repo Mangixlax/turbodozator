@@ -12,7 +12,13 @@
         <ui-form-button>Ознакомиться</ui-form-button>
       </div>
       <div :class="$style['technical__cards']">
-        
+        <img
+          v-for="(card, index) in technicalCards"
+          :key="index"
+          :src="require(`@/assets/images/technical/${card.image}`)"
+          alt=""
+          :class="$style['technical__cards-card']"
+        />
       </div>
     </div>
   </div>
@@ -25,25 +31,16 @@ import UiFormButton from '~/components/Ui/Form/UiFormButton.vue'
 
 @Component({
   components: {
-    UiFormButton
+    UiFormButton,
   },
 })
 export default class Technical extends Vue {
   public technicalCards: Array<object> = [
     {
-      icon: 'technical/technology',
-      title: 'Технологичность',
-      description: `Высокая технологичность обеспечивает надежность непрерывного процесса пенообразования`,
+      image: 'tdz-03.png',
     },
     {
-      icon: 'technical/compact',
-      title: 'Компактность',
-      description: `Высокая технологичность обеспечивает надежность непрерывного процесса пенообразования`,
-    },
-    {
-      icon: 'technical/autonomy',
-      title: 'Автономность',
-      description: `Высокая технологичность обеспечивает надежность непрерывного процесса пенообразования`,
+      image: 'tdz-02.png',
     },
   ]
 }
@@ -53,6 +50,7 @@ export default class Technical extends Vue {
 .technical {
   width: 100%;
   padding: 90px 0px;
+  background: $color-black-100;
 
   &__container {
     max-width: 1200px;
@@ -64,30 +62,40 @@ export default class Technical extends Vue {
   &__info {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-bottom: 60px;
+    max-width: 695px;
 
     &-title {
       @include size-h2-regular;
       margin: 0;
       margin-bottom: 24px;
-      color: $color-black-100;
+      color: $color-white-100;
     }
 
     &-description {
       @include size-body-big-text;
-      color: $color-black-88;
-      text-align: center;
+      color: $color-white-88;
+      max-width: 603px;
+      margin-bottom: 60px;
     }
   }
 
   &__cards {
     max-width: 900px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 50px;
-    margin-bottom: 64px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    &-card {
+      object-fit: contain;
+      object-position: bottom;
+      height: fit-content;
+
+      & + & {
+        margin-left: 64px;
+      }
+    }
   }
 
   &__video {
@@ -106,6 +114,32 @@ export default class Technical extends Vue {
       height: 100%;
       z-index: 5;
       border-radius: 50px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__info {
+      &-title {
+        @include size-h2-small;
+      }
+
+      &-description {
+        @include size-body-text;
+      }
+    }
+
+    &__cards {
+      flex-direction: column-reverse;
+      align-items: initial;
+
+      &-card {
+        width: fit-content;
+
+        & + & {
+          margin-left: initial;
+          margin-bottom: 24px;
+        }
+      }
     }
   }
 }

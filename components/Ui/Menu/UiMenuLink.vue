@@ -49,7 +49,7 @@ export default class UiMenuLink extends Vue {
 
   &__label {
     text-decoration: none;
-    @include size-h3-semi-bold;
+    @include size-h3-regular;
     color: $color-black-100;
     margin: 0;
     margin-right: auto;

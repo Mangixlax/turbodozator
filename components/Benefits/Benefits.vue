@@ -98,11 +98,11 @@ export default class Benefits extends Vue {
   }
 
   &__cards {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 50px;
+    grid-gap: 45px;
     margin-bottom: 64px;
   }
 
@@ -122,6 +122,50 @@ export default class Benefits extends Vue {
       height: 100%;
       z-index: 5;
       border-radius: 50px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &__info {
+      &-description {
+        @include size-body-text;
+      }
+    }
+    &__cards {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__info {
+      align-items: initial;
+
+      &-title {
+        @include size-h2-small;
+      }
+
+      &-description {
+        text-align: initial;
+      }
+    }
+
+    &__video {
+      max-width: 900px;
+      margin: 0 auto;
+
+      &-container {
+        position: relative;
+        padding-bottom: 56.25%;
+      }
+
+      &-frame {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        border-radius: 25px;
+      }
     }
   }
 }

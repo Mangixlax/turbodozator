@@ -142,5 +142,11 @@ export default class BaseHeaderNavItem extends Vue {
     z-index: 100;
     pointer-events: all;
   }
+
+  @media (max-width: 768px) {
+    &-link {
+      @include size-h3-small
+    }
+  }
 }
 </style>
