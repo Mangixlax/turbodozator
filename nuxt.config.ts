@@ -2,7 +2,13 @@ const isDev = process.env.NODE_ENV === 'development'
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  target: "server",
+  ssr: false,
+  
+  target: "static",
+
+  router: {
+    base: '/turbodozator/'
+  },
 
   server: {
     host: process.env.HOST || "0.0.0.0",
