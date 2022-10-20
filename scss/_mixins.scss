@@ -121,10 +121,9 @@
 @mixin size-h3-small {
   font-family: 'Noto Sans';
   font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
+  font-weight: 350;
+  font-size: 13px;
   line-height: 34px;
-  letter-spacing: 0.2px;
 }
 
 @mixin size-h3-medium {

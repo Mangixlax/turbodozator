@@ -38,7 +38,7 @@ export default class UiFormInput extends Vue {
     width: 100%;
     border: none;
     transition: background-color 0.25s ease;
-    border: 1px solid $color-black-100;
+    border: 1px solid $color-black-32;
 
     &:hover {
       background-color: $color-blue-10;

@@ -1,10 +1,12 @@
 <template>
   <main :class="$style['main']">
-    <main-screen id="tdz"/>
-    <benefits id="benefits"/>
-    <technical id="technical"/>
-    <partners id="partners"/>
-    <contacts id="contacts"/>
+    <main-screen id="tdz" />
+    <benefits id="benefits" />
+    <technical id="technical" />
+    <technical-table />
+    <technical-description />
+    <partners id="partners" />
+    <contacts id="contacts" />
   </main>
 </template>
 
@@ -17,6 +19,8 @@ import metaGenerator from '~/lib/meta'
 import MainScreen from "~/components/MainScreen/MainScreen.vue";
 import Benefits from '~/components/Benefits/Benefits.vue'
 import Technical from '~/components/Technical/Technical.vue'
+import TechnicalTable from '~/components/Technical/TechnicalTable.vue'
+import TechnicalDescription from '~/components/Technical/TechnicalDescription.vue'
 import Partners from '~/components/Partners/Partners.vue'
 import Contacts from '~/components/Contacts/Contacts.vue'
 
@@ -25,6 +29,8 @@ import Contacts from '~/components/Contacts/Contacts.vue'
     MainScreen,
     Benefits,
     Technical,
+    TechnicalTable,
+    TechnicalDescription,
     Partners,
     Contacts,
   },

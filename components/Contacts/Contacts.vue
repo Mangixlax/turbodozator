@@ -99,7 +99,7 @@
           alt="Маркер компании на карте"
           :class="$style['contacts__right-image']"
         />
-        <base-footer-icons :class="$style['contacts__right-icons']" />
+        <!-- <base-footer-icons :class="$style['contacts__right-icons']" /> -->
       </div>
     </div>
   </section>
@@ -338,8 +338,9 @@ export default class Contacts extends Vue {
 
     &-image {
       width: 100%;
-      height: auto;
-      margin-bottom: 32px;
+      height: 600px;
+      object-fit: cover;
+      margin-top: auto;
     }
 
     &-icons {
