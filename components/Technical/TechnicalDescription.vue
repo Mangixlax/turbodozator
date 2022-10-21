@@ -255,16 +255,25 @@ export default class TechnicalTable extends Vue {
       color: $color-white-88;
     }
 
-    li {
-      @include size-body-tiny-text;
-      color: $color-white-88;
+    ul,
+    ol {
+      padding-left: 20px;
+
+      li {
+        @include size-body-tiny-text;
+        color: $color-white-88;
+
+        & + li {
+          margin-top: 8px;
+        }
+      }
     }
 
     h2 {
       @include size-h2;
       color: $color-white-100;
     }
-    
+
     h3 {
       @include size-h3-regular;
       color: $color-white-100;
@@ -272,9 +281,12 @@ export default class TechnicalTable extends Vue {
   }
 
   @media (max-width: 768px) {
-    &__table {
-      th {
-        @include size-h3-small;
+    padding: 16px 0px 32px;
+
+    &__container {
+      h2 {
+        @include size-h2-small;
+        color: $color-white-100;
       }
     }
   }

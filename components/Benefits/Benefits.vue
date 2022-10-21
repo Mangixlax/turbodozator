@@ -54,12 +54,12 @@ export default class Benefits extends Vue {
     {
       icon: 'benefits/compact',
       title: 'Компактность',
-      description: `Высокая технологичность обеспечивает надежность непрерывного процесса пенообразования`,
+      description: `ТДЗ имееет компактные габариты и может быть установлен как в горизонтальном таки в вертикальном положении`,
     },
     {
       icon: 'benefits/autonomy',
       title: 'Автономность',
-      description: `Высокая технологичность обеспечивает надежность непрерывного процесса пенообразования`,
+      description: `ТДЗ не требует дополнительных источников питания. Работа полностью обеспечивается потоком воды.`,
     },
   ]
 }
@@ -98,11 +98,11 @@ export default class Benefits extends Vue {
   }
 
   &__cards {
-    max-width: 1000px;
+    max-width: 1200px;
+    padding: 20px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 45px;
     margin-bottom: 64px;
   }
 

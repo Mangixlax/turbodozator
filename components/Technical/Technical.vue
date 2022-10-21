@@ -118,6 +118,8 @@ export default class Technical extends Vue {
   }
 
   @media (max-width: 768px) {
+    padding: 32px 0;
+
     &__info {
       &-title {
         @include size-h2-small;

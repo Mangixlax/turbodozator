@@ -4,7 +4,7 @@
       <table :class="$style['technical__table']">
         <thead :class="$style['technical__table-head']">
           <tr>
-            <th rowspan="2">№ п/п</th>
+            <th rowspan="2">№</th>
             <th rowspan="2">Наименование параметра</th>
             <th colspan="3">Характеристики</th>
           </tr>
@@ -149,6 +149,7 @@ export default class TechnicalTable extends Vue {
     height: 100%;
     width: 100%;
     border-collapse: collapse;
+
     &-head {
       width: 100%;
 
@@ -183,12 +184,63 @@ export default class TechnicalTable extends Vue {
       td {
         padding: 8px 16px;
       }
+
+      tr {
+        td:first-child {
+          text-align: center;
+        }
+      }
     }
   }
   @media (max-width: 768px) {
+    padding: 16px 0px;
+    
     &__table {
       th {
         @include size-h3-small;
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    &__table {
+      height: 100%;
+      width: 100%;
+      border-collapse: collapse;
+
+      &-head {
+        width: 100%;
+
+        tr,
+        th {
+          @include size-h3-small;
+        }
+
+        th {
+          padding: 4px;
+        }
+      }
+
+      &-body {
+        tr,
+        td {
+          @include size-h3-small;
+        }
+
+        td {
+          padding: 4px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1440px) {
+    &__table {
+      &-body {
+        tr,
+        td {
+          white-space: initial;
+        }
       }
     }
   }

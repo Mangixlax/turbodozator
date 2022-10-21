@@ -130,6 +130,17 @@ export default class Partners extends Vue {
   @media (max-width: 767px) {
     padding: 32px 0;
 
+    &__container {
+      &-title {
+        @include size-h1-small
+      }
+
+      &-description {
+        @include size-body-text;
+        margin-bottom: 32px;
+      }
+    }
+
     &__cards {
       grid-template-columns: 1fr;
     }

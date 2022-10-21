@@ -29,10 +29,19 @@ export default class benefitsCard extends Vue {
   text-align: center;
   padding: 12px 24px;
 
+  &:hover {
+    outline: solid 1px $color-black-32;
+
+    .benefits-card__icon {
+      transform: translateY(8px);
+    }
+  }
+
   &__icon {
     height: 72px;
     width: 72px;
     margin-bottom: 20px;
+    transition: transform 0.5s ease;
   }
 
   &__title {
