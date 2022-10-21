@@ -14,6 +14,7 @@
           v-for="(card, index) in benefitsCards"
           :key="index"
           :card="card"
+          :class="$style['benefits__cards-card']"
         />
       </div>
       <div :class="$style['benefits__video']">
@@ -98,8 +99,6 @@ export default class Benefits extends Vue {
   }
 
   &__cards {
-    max-width: 1200px;
-    padding: 20px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -133,6 +132,12 @@ export default class Benefits extends Vue {
     }
     &__cards {
       grid-template-columns: 1fr;
+
+      &-card {
+        & + & {
+          margin-top: 16px;
+        }
+      }
     }
   }
 

@@ -194,10 +194,18 @@ export default class TechnicalTable extends Vue {
   }
   @media (max-width: 768px) {
     padding: 16px 0px;
-    
+
     &__table {
       th {
         @include size-h3-small;
+      }
+
+      &-body {
+        tr {
+          td:not(:nth-child(2)) {
+            text-align: center;
+          }
+        }
       }
     }
   }

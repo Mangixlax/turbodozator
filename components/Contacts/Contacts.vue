@@ -389,6 +389,11 @@ export default class Contacts extends Vue {
         grid-template-columns: 1fr;
         grid-gap: 16px;
       }
+
+      &-image {
+        object-position: 100% center;
+        height: 500px;
+      }
     }
   }
 }
