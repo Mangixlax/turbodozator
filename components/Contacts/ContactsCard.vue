@@ -2,6 +2,7 @@
   <div :class="$style['contacts-card']">
     <svg-icon :name="`contacts/${card.icon}`" :class="$style['contacts-card__icon']" />
     <span :class="$style['contacts-card__text']" v-html="card.text" />
+    <a :href="card.href" target="_blank" :class="$style['contacts-card__link']"></a>
   </div>
 </template>
 
@@ -29,8 +30,8 @@ export default class ContactsCard extends Vue {
   align-items: center;
   justify-content: flex-start;
   padding: 16px;
-
   outline: none;
+  position: relative;
 
   &:hover {
     outline: solid 1px $color-black-32;
@@ -52,6 +53,11 @@ export default class ContactsCard extends Vue {
     color: $color-black-88;
     margin-bottom: 15px;
     text-align: center;
+  }
+
+  &__link {
+    position: absolute;
+    inset: 0;
   }
 
   @media (max-width: 767px) {

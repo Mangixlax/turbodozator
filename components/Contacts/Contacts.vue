@@ -175,14 +175,17 @@ export default class Contacts extends Vue {
     {
       icon: 'marker',
       text: 'Московское представительство<br> 115446, г.Москва, Коломенский проезд, д.8, к. 4',
+      href: 'https://yandex.ru/maps/org/gk_spetsprodukt/138310307827/?ll=37.649238%2C55.664492&z=17'
     },
     {
       icon: 'mail',
       text: 'mail@bgsp.com',
+      href: 'mailto: mail@bgsp.com'
     },
     {
       icon: 'phone',
       text: '8 (800) 333-78-37',
+      href: 'tel:+78003337837'
     },
   ]
 
