@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <base-header is-main-page />
+  <div  id="tdz">
+    <base-header is-main-page/>
     <nuxt />
     <!--    <lazy-hydrate when-visible>-->
     <!--      <base-seo-text />-->

@@ -92,7 +92,7 @@ export default class BaseHeader extends Vue {
   public headerMenu: Array<IHeaderMenuItem> = [
     {
       label: 'ТДЗ',
-      route: { name: 'index' },
+      route: { name: 'index', hash: '#tdz' },
     },
     {
       label: 'Преимущества',
