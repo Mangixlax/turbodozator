@@ -142,6 +142,8 @@ export default class Benefits extends Vue {
   }
 
   @media (max-width: 768px) {
+    padding: 32px 0px;
+    
     &__info {
       align-items: initial;
 
