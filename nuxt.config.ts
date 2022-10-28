@@ -77,7 +77,7 @@ export default {
     "@nuxt/image",
     "@nuxtjs/svg-sprite",
     "@nuxtjs/dayjs",
-    '~modules/yandex-metrika/index.js',
+    // '~modules/yandex-metrika/index.js',
   ],
 
   yandexMetrika: {
