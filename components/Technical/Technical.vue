@@ -139,7 +139,8 @@ export default class Technical extends Vue {
 
       &-card {
         width: fit-content;
-
+        max-width: 100%;
+        
         & + & {
           margin-left: initial;
           margin-top: 32px;
