@@ -182,7 +182,7 @@ export default class TechnicalTable extends Vue {
       }
 
       td {
-        padding: 8px 16px;
+        padding: 8px 12px;
       }
 
       tr {

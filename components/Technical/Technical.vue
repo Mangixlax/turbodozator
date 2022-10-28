@@ -37,10 +37,13 @@ import UiFormButton from '~/components/Ui/Form/UiFormButton.vue'
 export default class Technical extends Vue {
   public technicalCards: Array<object> = [
     {
-      image: 'tdz-03.png',
+      image: 'tdz-01.png',
     },
     {
       image: 'tdz-02.png',
+    },
+    {
+      image: 'tdz-03.png',
     },
   ]
 }
@@ -62,7 +65,7 @@ export default class Technical extends Vue {
   &__info {
     display: flex;
     flex-direction: column;
-    margin-bottom: 60px;
+    margin-bottom: 32px;
     max-width: 695px;
 
     &-title {
@@ -81,7 +84,7 @@ export default class Technical extends Vue {
   }
 
   &__cards {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: flex-end;
@@ -93,7 +96,7 @@ export default class Technical extends Vue {
       height: fit-content;
 
       & + & {
-        margin-left: 64px;
+        margin-left: 32px;
       }
     }
   }
@@ -131,7 +134,7 @@ export default class Technical extends Vue {
     }
 
     &__cards {
-      flex-direction: column-reverse;
+      flex-direction: column;
       align-items: initial;
 
       &-card {
@@ -139,7 +142,7 @@ export default class Technical extends Vue {
 
         & + & {
           margin-left: initial;
-          margin-bottom: 24px;
+          margin-top: 32px;
         }
       }
     }
