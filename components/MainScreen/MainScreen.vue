@@ -8,7 +8,7 @@
         <span :class="$style['main-screen__info-description']">
           Лучшее решение среди дозаторов пенообразователя
         </span>
-        <ui-form-button :color="'red'">Узнать больше</ui-form-button>
+        <ui-form-button :color="'blue'">Узнать больше</ui-form-button>
       </div>
       <img :src="require('@/assets/images/main-screen/main-screen-tdz.png')" alt="турбодозатор" :class="$style['main-screen__bg']">
     </div>
