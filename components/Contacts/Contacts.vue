@@ -175,17 +175,17 @@ export default class Contacts extends Vue {
     {
       icon: 'marker',
       text: 'Московское представительство<br> 115446, г.Москва, Коломенский проезд, д.8, к. 4',
-      href: 'https://yandex.ru/maps/org/gk_spetsprodukt/138310307827/?ll=37.649238%2C55.664492&z=17'
+      href: 'https://yandex.ru/maps/org/gk_spetsprodukt/138310307827/?ll=37.649238%2C55.664492&z=17',
     },
     {
       icon: 'mail',
       text: 'mail@bgsp.com',
-      href: 'mailto: mail@bgsp.com'
+      href: 'mailto: mail@bgsp.com',
     },
     {
       icon: 'phone',
       text: '8 (800) 333-78-37',
-      href: 'tel:+78003337837'
+      href: 'tel:+78003337837',
     },
   ]
 
@@ -225,7 +225,16 @@ export default class Contacts extends Vue {
     if (!this.$v.$invalid) {
       // Show recaptcha
       this.$axios
-        .$post('', this.formData)
+        .$post(
+          `https://bgsp.bitrix24.ru/rest/3839/gm3t6jpouxohfc96/crm.lead.add.json?FIELDS[ASSIGNED_BY_ID]=4405&FIELDS[SOURCE_ID]=53&FIELDS[NAME]=${
+            this.form.name
+          }&FIELDS[PHONE][0][VALUE]=${this.form.phone.replace(
+            /[^\d]/g,
+            ''
+          )}&FIELDS[EMAIL][0][VALUE]=${this.form.email}&FIELDS[COMMENTS]=${
+            this.form.message
+          }`
+        )
         .then((responce) => {
           this.onResetForm()
           this.onShowFinishModal(this.finishModalTexts.success)
@@ -356,7 +365,7 @@ export default class Contacts extends Vue {
     &__container {
       flex-direction: column-reverse;
     }
-    
+
     &__right {
       margin-left: 0;
       margin-bottom: 32px;
