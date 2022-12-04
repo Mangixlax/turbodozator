@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style['technical']">
+  <div :class="$style['technical']" id="table">
     <div :class="$style['technical__container']">
       <table :class="$style['technical__table']">
         <thead :class="$style['technical__table-head']">

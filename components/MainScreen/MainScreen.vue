@@ -8,7 +8,7 @@
         <span :class="$style['main-screen__info-description']">
           Лучшее решение среди дозаторов пенообразователя
         </span>
-        <ui-form-button :color="'red'">Узнать больше</ui-form-button>
+        <ui-form-button :color="'red'" @click="onShowCallBackModal()" with-wave>Узнать больше</ui-form-button>
       </div>
       <img :src="require('@/assets/images/main-screen/main-screen-tdz.png')" alt="турбодозатор" :class="$style['main-screen__bg']">
     </div>
@@ -25,7 +25,17 @@ import UiFormButton from '~/components/Ui/Form/UiFormButton.vue'
     UiFormButton
   }
 })
-export default class MainScreen extends Vue {}
+export default class MainScreen extends Vue {
+  public onShowCallBackModal(text: object) {
+    this.$modal.show({
+      bind: {
+        name: 'CallBack',
+      },
+      component: () =>
+        import('~/components/Modal/Content/CallBack/CallBack.vue'),
+    })
+  }
+}
 </script>
 
 <style lang="scss" module>

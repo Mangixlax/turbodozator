@@ -14,6 +14,7 @@
       </div>
       <ui-form-button
         :class="$style['partners__container-button']"
+        :tag="'nuxt-link'" :to="{ name: 'index', hash: '#contacts' }"
       >
         Напишите нам!
       </ui-form-button>

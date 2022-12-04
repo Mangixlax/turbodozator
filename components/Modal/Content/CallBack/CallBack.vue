@@ -1,12 +1,11 @@
 <template>
-  <section :class="$style['contacts']">
-    <h2 :class="$style['contacts-title']">Свяжитесь с нами</h2>
-    <p :class="$style['contacts-description']">
-      Большинство дозаторов турбинного типа производятся зарубежом ТДЗ надежное
-      решения собственного производства!
-    </p>
-    <div :class="$style['contacts__container']">
-      <div :class="$style['contacts__left']">
+  <modal-wrapper-simple v-bind="{ ...$attrs, ...$props }" v-on="$listeners">
+    <section :class="$style['contacts']">
+      <h2 :class="$style['contacts-title']">Свяжитесь с нами</h2>
+      <p :class="$style['contacts-description']">
+        Для получения дополнительной информации оставьте заявку:
+      </p>
+      <div :class="$style['contacts__container']">
         <ui-form-group tag="label" for="callback-name">
           <ui-form-label tag="div" required> Ваше имя </ui-form-label>
           <ui-form-input placeholder="Ваше имя" v-model="form.name" />
@@ -86,23 +85,8 @@
           Отправить
         </ui-form-button>
       </div>
-      <div :class="$style['contacts__right']">
-        <div :class="$style['contacts__right-cards']">
-          <contacts-card
-            v-for="(card, index) in contactCards"
-            :key="index"
-            :card="card"
-          />
-        </div>
-        <img
-          :src="require('@/assets/images/contacts/map.jpg')"
-          alt="Маркер компании на карте"
-          :class="$style['contacts__right-image']"
-        />
-        <!-- <base-footer-icons :class="$style['contacts__right-icons']" /> -->
-      </div>
-    </div>
-  </section>
+    </section>
+  </modal-wrapper-simple>
 </template>
 
 <script lang="ts">
@@ -112,7 +96,7 @@ import { Component, Prop } from 'nuxt-property-decorator'
 import { validationMixin } from 'vuelidate'
 import { mask } from 'vue-the-mask'
 import { email, minLength, required, sameAs } from 'vuelidate/lib/validators'
-import { getSiteUrl } from '~/lib/utils'
+import ModalWrapperSimple from '~/components/Modal/Wrapper/ModalWrapperSimple.vue'
 import metaGenerator from '~/lib/meta'
 import UiFormGroup from '~/components/Ui/Form/UiFormGroup.vue'
 import UiFormLabel from '~/components/Ui/Form/UiFormLabel.vue'
@@ -132,6 +116,7 @@ interface Form {
 
 @Component({
   components: {
+    ModalWrapperSimple,
     UiFormGroup,
     UiFormLabel,
     UiFormInput,
@@ -163,6 +148,9 @@ interface Form {
   },
 })
 export default class Contacts extends Vue {
+  @Prop({ type: String, required: true })
+  name!: string
+
   public form: Form = {
     name: '',
     email: '',
@@ -179,13 +167,13 @@ export default class Contacts extends Vue {
     },
     {
       icon: 'mail',
-      text: 'info@turbodozator.ru',
-      href: 'mailto: info@turbodozator.ru',
+      text: 'mail@bgsp.com',
+      href: 'mailto: mail@bgsp.com',
     },
     {
       icon: 'phone',
-      text: '8 (499) 455-51-57',
-      href: 'tel:+74994555157',
+      text: '8 (800) 333-78-37',
+      href: 'tel:+78003337837',
     },
   ]
 
@@ -270,32 +258,30 @@ export default class Contacts extends Vue {
 .contacts {
   width: 100%;
   background-size: cover;
-  padding-top: 24px;
+  max-width: 350px;
+  padding: 20px;
 
   &-title {
-    @include size-h1-big;
+    @include size-h2-small;
     color: $color-black-100;
     margin: 0;
     margin-bottom: 16px;
-    text-align: center;
   }
 
   &-description {
-    @include size-body-big-text;
-    text-align: center;
+    @include size-body-text;
     color: $color-black-88;
     margin: 0 auto;
-    margin-bottom: 64px;
+    margin-bottom: 16px;
     max-width: 903px;
   }
 
   &__container {
-    max-width: 1200px;
     width: 100%;
     margin: auto;
     vertical-align: middle;
-    padding: 0 20px;
     display: flex;
+    flex-direction: column;
 
     &-title {
       @include size-h2-small;
@@ -327,38 +313,6 @@ export default class Contacts extends Vue {
       color: $color-red-72;
       padding-top: 4px;
       height: 16px;
-    }
-  }
-
-  &__left {
-    max-width: 350px;
-    width: 100%;
-    padding: 32px;
-    border: 1px solid $color-black-24;
-  }
-
-  &__right {
-    display: flex;
-    flex-direction: column;
-    margin-left: 48px;
-    width: 100%;
-
-    &-cards {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      margin-bottom: 32px;
-    }
-
-    &-image {
-      width: 100%;
-      height: 600px;
-      object-fit: cover;
-      margin-top: auto;
-    }
-
-    &-icons {
-      margin-top: auto;
-      margin-left: auto;
     }
   }
 

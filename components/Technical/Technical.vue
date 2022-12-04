@@ -9,7 +9,9 @@
           ТДЗ не имеет аналогов на российском рынке, модель доступна в 3-х
           исполнениях.
         </span>
-        <ui-form-button>Ознакомиться</ui-form-button>
+        <ui-form-button :tag="'nuxt-link'" :to="{ name: 'index', hash: '#table' }">
+          Ознакомиться
+        </ui-form-button>
       </div>
       <div :class="$style['technical__cards']">
         <img
@@ -140,7 +142,7 @@ export default class Technical extends Vue {
       &-card {
         width: fit-content;
         max-width: 100%;
-        
+
         & + & {
           margin-left: initial;
           margin-top: 32px;

@@ -16,9 +16,9 @@
             :class="$style['menu__dropdown']"
             :isOpen="index === 0"
           >
-            <template v-slot:icon-before>
+            <!-- <template v-slot:icon-before>
               <svg-icon :name="`menu/${item.icon}`"></svg-icon>
-            </template>
+            </template> -->
             <template v-slot:label>
               {{ item.label }}
             </template>

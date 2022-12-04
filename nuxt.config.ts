@@ -135,7 +135,7 @@ export default {
     scrollBehavior(to: any, from: any, savedPosition: any) {
       if (to.hash) {
         return window.scrollTo({
-          top: document.querySelector(to.hash).offsetTop - 20,
+          top: document.querySelector(to.hash).offsetTop - 70,
           behavior: "smooth",
         });
       }

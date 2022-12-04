@@ -15,6 +15,7 @@
         [$style['button--red']]: props.color === 'red',
         [$style['button--square']]: props.square,
         [$style['button--with-blink']]: props.withBlink,
+        [$style['button--with-wave']]: props.withWave,
         [$style['button--full-size']]: props.fullSize,
         [$style['button--disable-hover']]: props.disableHover,
         [$style['button--disable-active']]: props.disableActive,
@@ -30,7 +31,7 @@
     >
       <slot name="icon-before" />
     </span>
-      <slot />
+    <slot />
     <span
       v-if="$slots['icon-after']"
       :class="[$style['icon'], $style['icon--after']]"
@@ -68,9 +69,12 @@ export default class UiFormButton extends Vue {
 
   @Prop({ type: Boolean, default: false })
   square!: boolean
-  
+
   @Prop({ type: Boolean, default: false })
   fullSize!: boolean
+
+  @Prop({ type: Boolean, default: false })
+  withWave!: boolean
 
   @Prop({ type: Boolean, default: false })
   withBlink!: boolean
@@ -101,17 +105,17 @@ export default class UiFormButton extends Vue {
   text-decoration: none;
   @include size-button;
   border-radius: 30px;
-  
+
   &--xl {
     padding: 24px 32px;
   }
 
   &--md {
-    padding: 16px 24px
+    padding: 16px 24px;
   }
 
   &--sm {
-    padding: 8px 16px
+    padding: 8px 16px;
   }
 
   &--red {
@@ -176,6 +180,27 @@ export default class UiFormButton extends Vue {
     padding: 15px 16px 15px 20px;
   }
 
+  &--with-wave {
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        transparent 0%,
+        #fffff0 50%,
+        transparent 100%
+      );
+      opacity: 0.3;
+      animation: wave 1.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+  }
+
   &--with-blink {
     background-color: $color-yellow-100;
     padding: 8px 23px 10px 23px;
@@ -236,7 +261,6 @@ export default class UiFormButton extends Vue {
   }
 }
 
-
 @keyframes order-animation {
   0% {
     transform: translateX(-100%);
@@ -244,6 +268,15 @@ export default class UiFormButton extends Vue {
 
   100% {
     transform: translateX(400%);
+  }
+}
+
+@keyframes wave {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
   }
 }
 </style>
