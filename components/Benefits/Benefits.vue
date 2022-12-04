@@ -110,6 +110,8 @@ export default class Benefits extends Vue {
     margin: 0 auto;
     border-radius: 50px;
     overflow: hidden;
+    outline: 1px solid #fff;
+    outline-offset: -1px;
     
     &-container {
       position: relative;
