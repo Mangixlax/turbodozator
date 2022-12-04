@@ -108,7 +108,9 @@ export default class Benefits extends Vue {
   &__video {
     max-width: 900px;
     margin: 0 auto;
-
+    border-radius: 50px;
+    overflow: hidden;
+    
     &-container {
       position: relative;
       padding-bottom: 56.25%;
@@ -120,8 +122,6 @@ export default class Benefits extends Vue {
       width: 100%;
       height: 100%;
       z-index: 5;
-      border-radius: 50px;
-      overflow: hidden;
     }
   }
 
@@ -144,7 +144,7 @@ export default class Benefits extends Vue {
 
   @media (max-width: 768px) {
     padding: 32px 0px;
-    
+
     &__info {
       align-items: initial;
 
@@ -173,7 +173,7 @@ export default class Benefits extends Vue {
         height: 100%;
         z-index: 5;
         border-radius: 24px;
-        border: 1px solid white; 
+        border: 1px solid white;
 
         body {
           background: transparent !important;
