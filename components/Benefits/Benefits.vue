@@ -120,7 +120,7 @@ export default class Benefits extends Vue {
       width: 100%;
       height: 100%;
       z-index: 5;
-      border-radius: 24px;
+      border-radius: 50px;
     }
   }
 
