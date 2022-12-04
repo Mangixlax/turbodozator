@@ -121,7 +121,7 @@ export default class Benefits extends Vue {
       height: 100%;
       z-index: 5;
       border-radius: 24px;
-      border: 1px solid $color-whitr-100;
+      border: 1px solid $color-white-100;
     }
   }
 
