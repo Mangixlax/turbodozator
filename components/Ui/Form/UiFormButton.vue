@@ -111,7 +111,7 @@ export default class UiFormButton extends Vue {
   }
 
   &--md {
-    padding: 13px 24px 16px 24px;
+    padding: 15px 24px 16px 24px;
   }
 
   &--sm {
