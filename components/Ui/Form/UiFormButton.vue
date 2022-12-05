@@ -95,7 +95,7 @@ export default class UiFormButton extends Vue {
   cursor: pointer;
   border: none;
   justify-content: center;
-  padding: 15px 20px;
+  padding: 12px 20px 15px 20px;
   background-color: $color-blue-100;
   min-height: 42px;
   position: relative;
@@ -111,7 +111,7 @@ export default class UiFormButton extends Vue {
   }
 
   &--md {
-    padding: 16px 24px;
+    padding: 13px 24px 16px 24px;
   }
 
   &--sm {
