@@ -119,10 +119,8 @@ export default class Benefits extends Vue {
       height: 100%;
       border-radius: 50px;
       overflow: hidden;
-
-      .ytp-cued-thumbnail-overlay-image {
-        background-size: 110%;
-      }
+      outline: 2px solid white;
+      outline-offset: -1px;
     }
   }
 
