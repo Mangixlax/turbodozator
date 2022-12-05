@@ -91,7 +91,7 @@ export default class BaseHeader extends Vue {
 
   public headerMenu: Array<IHeaderMenuItem> = [
     {
-      label: 'ТДЗ',
+      label: 'Турбодозатор',
       route: { name: 'index', hash: '#tdz' },
     },
     {
@@ -114,7 +114,7 @@ export default class BaseHeader extends Vue {
 
   public headerMobileMenu: Array<IHeaderMobileMenuItem> = [
     {
-      label: 'ТДЗ',
+      label: 'Турбодозатор',
       type: 'link',
       icon: 'about',
       iconColor: 'yellow',

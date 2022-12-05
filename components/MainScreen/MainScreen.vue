@@ -3,7 +3,7 @@
     <div :class="$style['main-screen__container']">
       <div :class="$style['main-screen__info']">
         <h1 :class="$style['main-screen__info-title']">
-          ТУРБОДОЗАТОР ТДЗ
+          ТУРБОДОЗАТОР
         </h1>
         <span :class="$style['main-screen__info-description']">
           Лучшее решение среди дозаторов пенообразователя

@@ -94,7 +94,7 @@ interface Form {
 export default class BaseFooter extends Vue {
   public footerMenu: Array<object> = [
     {
-      label: 'ТДЗ',
+      label: 'Турбодозатор',
       route: { name: 'index' },
     },
     {
