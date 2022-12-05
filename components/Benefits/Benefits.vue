@@ -20,8 +20,6 @@
       <div :class="$style['benefits__video']">
         <div :class="$style['benefits__video-container']">
           <iframe
-            width="560"
-            height="315"
             src="https://www.youtube.com/embed/ZEdZfWa9tzo"
             title="YouTube video player"
             frameborder="0"
@@ -108,11 +106,7 @@ export default class Benefits extends Vue {
   &__video {
     max-width: 900px;
     margin: 0 auto;
-    border-radius: 50px;
-    overflow: hidden;
-    outline: 1px solid #fff;
-    outline-offset: -1px;
-    
+
     &-container {
       position: relative;
       padding-bottom: 56.25%;
@@ -123,7 +117,12 @@ export default class Benefits extends Vue {
       inset: 0;
       width: 100%;
       height: 100%;
-      z-index: 5;
+      border-radius: 50px;
+      overflow: hidden;
+
+      .ytp-cued-thumbnail-overlay-image {
+        background-size: 110%;
+      }
     }
   }
 
