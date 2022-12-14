@@ -20,36 +20,11 @@
       </div>
       <div :class="$style['footer__right']">
         <div :class="$style['footer__subscribe']">
-          <div :class="$style['footer__subscribe-title']">
-            Подпишись чтобы не пропустить!
-          </div>
-          <div :class="$style['footer__subscribe-description']">
-            {{
-              "Подпишись на новости и будь в курсе развития проекта "
-            }}
-          </div>
-          <div :class="$style['footer__subscribe-form']">
-            <ui-form-input
-              placeholder="Ваш e-mail"
-              v-model="$v.form.email.$model"
-              :class="$style['footer__subscribe-input']"
-            />
-            <ui-form-button
-              :variant="'sm'"
-              square
-              :class="$style['footer__subscribe-button']"
-            >
-              Подписатья
-            </ui-form-button>
-          </div>
-          <span :class="$style['footer__subscribe-error']">
-            <span
-              :class="$style['footer__subscribe-text']"
-              v-if="$v.form.email.$error"
-            >
-              Введите корректный e-mail
-            </span>
-          </span>
+          <img
+            :src="require('@/assets/images/footer/decore.png')"
+            alt="турбодозатор"
+            :class="$style['footer__right-decore']"
+          />
         </div>
         <div :class="$style['footer__socials']">
           <div :class="$style['footer__socials-title']">Наши соцсети</div>
@@ -61,17 +36,17 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator";
-import { validationMixin } from "vuelidate";
-import { email, required } from "vuelidate/lib/validators";
-import BaseFooterIcons from "~/components/Base/BaseFooter/BaseFooterIcons.vue";
-import Logo from "~/components/Logo.vue";
-import UiFormInput from "~/components/Ui/Form/UiFormInput.vue";
-import UiFormGroup from "~/components/Ui/Form/UiFormButton.vue";
-import UiFormButton from "~/components/Ui/Form/UiFormButton.vue";
+import { Component, Vue } from 'nuxt-property-decorator'
+import { validationMixin } from 'vuelidate'
+import { email, required } from 'vuelidate/lib/validators'
+import BaseFooterIcons from '~/components/Base/BaseFooter/BaseFooterIcons.vue'
+import Logo from '~/components/Logo.vue'
+import UiFormInput from '~/components/Ui/Form/UiFormInput.vue'
+import UiFormGroup from '~/components/Ui/Form/UiFormButton.vue'
+import UiFormButton from '~/components/Ui/Form/UiFormButton.vue'
 
 interface Form {
-  email: string;
+  email: string
 }
 
 @Component({
@@ -113,29 +88,28 @@ export default class BaseFooter extends Vue {
       label: 'Контакты',
       route: { name: 'index', hash: '#contacts' },
     },
-  ];
+  ]
 
   public form: Form = {
-    email: "",
-  };
+    email: '',
+  }
 
   public finishModalTexts = {
     success: {
-      title: "Успех!",
+      title: 'Успех!',
       description:
-        "Ваша заявка успешно отправлена! Ожидайте, мой менеджер обязательно с вами свяжется.",
+        'Ваша заявка успешно отправлена! Ожидайте, мой менеджер обязательно с вами свяжется.',
     },
     error: {
-      title: "Ошибка :(",
+      title: 'Ошибка :(',
       description:
-        "Произошла ошибка. Пожалуйста, побробуйте еще раз немного позднее...",
+        'Произошла ошибка. Пожалуйста, побробуйте еще раз немного позднее...',
     },
-  };
-
-  get getFullYear() {
-    return new Date().getFullYear();
   }
 
+  get getFullYear() {
+    return new Date().getFullYear()
+  }
 }
 </script>
 
@@ -181,7 +155,7 @@ export default class BaseFooter extends Vue {
       }
 
       &--active:after {
-        content: "";
+        content: '';
         position: absolute;
         bottom: 0;
         left: 0;
@@ -195,13 +169,18 @@ export default class BaseFooter extends Vue {
   &__right {
     display: flex;
     flex-direction: column;
+
+    &-decore {
+      height: 250px;
+      width: 300px;
+    }
   }
 
   &__subscribe {
     display: flex;
     flex-direction: column;
     max-width: 335px;
-    margin-bottom: 64px;
+    margin-bottom: 32px;
 
     &-title {
       @include size-h1-small-bold;
