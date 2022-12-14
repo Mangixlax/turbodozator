@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<clipPath id="clip0_501_537"><path fill="#fff" d="M0 0h20v20H0z"/></clipPath>
+</defs>
+<symbol id="i-checkbox-checked" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_501_537)" stroke="#2091F9"><path d="M14.667 6.5L8.25 12.917 5.333 10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 .5H6A5.5 5.5 0 00.5 6v8A5.5 5.5 0 006 19.5h8a5.5 5.5 0 005.5-5.5V6A5.5 5.5 0 0014 .5z"/></g></symbol>
+<symbol id="i-checkbox-error" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x=".5" y=".5" width="19" height="19" rx="5.5" stroke="red" stroke-opacity=".88"/></symbol>
+<symbol id="i-checkbox" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x=".5" y=".5" width="19" height="19" rx="5.5" stroke="#2B2B2B" stroke-opacity=".88"/></symbol>
+<symbol id="i-cross" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.74 5a.499.499 0 00-.349.153L8.25 7.295 6.109 5.153a.499.499 0 10-.706.706L7.545 8l-2.142 2.141a.499.499 0 10.706.706L8.25 8.705l2.141 2.142a.5.5 0 10.706-.706L8.955 8l2.142-2.141A.5.5 0 0010.739 5z" fill="#fff"/></symbol>
+</svg>
