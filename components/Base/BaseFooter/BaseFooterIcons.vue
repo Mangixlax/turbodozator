@@ -27,30 +27,21 @@ import { IIcon } from '~/types/Base'
 export default class BaseFooterIcons extends Vue {
   public icons: Array<IIcon> = [
     {
+      name: 'ok',
+      href: 'https://ok.ru/group/55302025117845',
+      title: 'Мы в Одноклассниках',
+    },
+    {
       name: 'vk',
-      href: '',
-      title: 'Я в Вк',
+      href: 'https://vk.com/public183882437',
+      title: 'Мы в Vk',
     },
     {
-      name: 'google',
-      href: '',
-      title: 'Я в Google',
+      name: 'youtube',
+      href: 'https://www.youtube.com/channel/UC0MlKXYLaZCZW6lCiugJ-4w',
+      title: 'Мы в Youtube',
     },
-    {
-      name: 'telegram',
-      href: '',
-      title: 'Я в Telegram',
-    },
-    {
-      name: 'whatsapp',
-      href: '',
-      title: 'Я в Whatsapp',
-    },
-    {
-      name: 'discord',
-      href: '',
-      title: 'Я в Discord',
-    },
+
   ]
 
   public normalizeIcons() {
