@@ -11,12 +11,12 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { Context } from "@nuxt/types";
-import { Component, Prop } from "nuxt-property-decorator";
+import Vue from 'vue'
+import { Context } from '@nuxt/types'
+import { Component, Prop } from 'nuxt-property-decorator'
 import { getSiteUrl } from '~/lib/utils'
 import metaGenerator from '~/lib/meta'
-import MainScreen from "~/components/MainScreen/MainScreen.vue";
+import MainScreen from '~/components/MainScreen/MainScreen.vue'
 import Benefits from '~/components/Benefits/Benefits.vue'
 import Technical from '~/components/Technical/Technical.vue'
 import TechnicalTable from '~/components/Technical/TechnicalTable.vue'
@@ -37,12 +37,11 @@ import Contacts from '~/components/Contacts/Contacts.vue'
 
   head() {
     const result: any = {
-      title: ``,
-      description: ``,
+      title: `Турбодозатор | Решение нового поколения`,
+      description: `Турбодозатор (ТДЗ) – представляет собой устройство, устанавливаемое на водяной магистрали, в целях обеспечения автоматического дозирования пенообразователя из ёмкости хранения в поток воды и получения раствора с определенной концетрацией.`,
       canonical: this.$route.path,
     }
 
-    
     result.canonical = getSiteUrl(result.canonical, true)
 
     return {
