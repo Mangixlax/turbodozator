@@ -272,7 +272,7 @@ export default class Contacts extends Vue {
     @include size-body-text;
     color: $color-black-88;
     margin: 0 auto;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     max-width: 903px;
   }
 
@@ -291,7 +291,7 @@ export default class Contacts extends Vue {
     }
 
     &-submit {
-      margin-top: 16px;
+      margin-top: 6px;
     }
 
     &-agreement {
