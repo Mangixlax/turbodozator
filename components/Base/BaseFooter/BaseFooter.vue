@@ -214,6 +214,7 @@ export default class BaseFooter extends Vue {
   &__socials {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     margin-top: auto;
 
     &-title {
