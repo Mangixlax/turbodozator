@@ -131,7 +131,6 @@ export default {
   },
 
   router: {
-    base: '/turbodozator/',
     scrollBehavior(to: any, from: any, savedPosition: any) {
       if (to.hash) {
         return window.scrollTo({
