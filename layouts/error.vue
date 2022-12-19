@@ -113,7 +113,7 @@ export default Vue.extend({
 }
 
 .h1 {
-  @include size-h2;
+  @include size-h1-big;
   font-size: 200px;
   line-height: 296px;
   text-align: center;
@@ -126,9 +126,12 @@ export default Vue.extend({
 }
 
 .text {
+  @include size-body-text;
+  
   &--center {
     text-align: center;
   }
+
   p {
     margin: 0;
     margin-bottom: 14px;
@@ -143,11 +146,11 @@ export default Vue.extend({
   }
 
   ul {
-    @include size-h2;
+    @include size-body-tiny-text;
     list-style: none;
     padding-left: 34px;
     margin-top: 0;
-
+  
     li {
       position: relative;
     }
