@@ -2,7 +2,7 @@
   <section :class="$style['contacts']">
     <h2 :class="$style['contacts-title']">Свяжитесь с нами</h2>
     <p :class="$style['contacts-description']">
-      Большинство дозаторов турбинного типа производятся зарубежом ТДЗ надежное
+      Большинство дозаторов турбинного типа производятся зарубежом Турбодозатор надежное
       решения собственного производства!
     </p>
     <div :class="$style['contacts__container']">
@@ -75,7 +75,7 @@
                 $v.form.agree_collect_data.$error,
             }"
           >
-            Я разрешаю ТДЗ собирать и обрабатывать мои данные
+            Я разрешаю turbodozator собирать и обрабатывать мои данные
           </span>
         </ui-form-group>
         <ui-form-button

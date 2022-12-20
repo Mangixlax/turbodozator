@@ -74,7 +74,7 @@
                 $v.form.agree_collect_data.$error,
             }"
           >
-            Я разрешаю ТДЗ собирать и обрабатывать мои данные
+            Я разрешаю собирать и обрабатывать мои данные
           </span>
         </ui-form-group>
         <ui-form-button
