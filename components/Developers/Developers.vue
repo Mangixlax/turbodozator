@@ -120,10 +120,10 @@ export default class Developers extends Vue {
     margin: 0 auto;
     align-items: center;
     padding-bottom: 32px;
-    margin-bottom: 80px;
+    margin-bottom: 64px;
 
     &-title {
-      @include size-h1-big;
+      @include size-h2;
       padding: 10px;
       margin: 0;
       margin-bottom: 10px;
@@ -136,7 +136,7 @@ export default class Developers extends Vue {
 
   &__files {
     display: flex;
-    padding: 56px 48px;
+    padding: 48px;
     background: $color-black-88;
     width: 100%;
     position: relative;
@@ -175,7 +175,7 @@ export default class Developers extends Vue {
       transition: all 0.2s ease;
 
       & + & {
-        margin-top: 60px;
+        margin-top: 40px;
       }
 
       &-svg {
@@ -213,8 +213,10 @@ export default class Developers extends Vue {
 
     &__files {
       &-bg {
-        height: 460px;
-        width: 460px;
+        height: 400px;
+        width: 400px;
+        right: -200px;
+        bottom: -200px;
       }
     }
 
@@ -239,6 +241,7 @@ export default class Developers extends Vue {
     &__files {
       flex-direction: column;
       padding: 24px 12px;
+      padding-bottom: 48px;
     }
 
     &__column {
