@@ -36,7 +36,7 @@
           </span>
         </ui-form-group>
         <ui-form-group tag="label" for="callback-email">
-          <ui-form-label tag="div" required> Ваш Email </ui-form-label>
+          <ui-form-label tag="div"> Ваш Email </ui-form-label>
           <ui-form-input
             placeholder="Ваш e-mail"
             v-model="$v.form.email.$model"
@@ -75,7 +75,7 @@
                 $v.form.agree_collect_data.$error,
             }"
           >
-            Я разрешаю turbodozator собирать и обрабатывать мои данные
+            Я разрешаю ООО "ЗАВОД СПЕЦХИМПРОДУКТ" собирать и обрабатывать мои данные
           </span>
         </ui-form-group>
         <ui-form-button
@@ -152,7 +152,6 @@ interface Form {
         minLength: minLength(18),
       },
       email: {
-        required,
         email,
       },
       message: {},
@@ -174,7 +173,7 @@ export default class Contacts extends Vue {
   public contactCards = [
     {
       icon: 'marker',
-      text: 'Московское представительство<br> 115446, г.Москва, Коломенский проезд, д.8, к. 4',
+      text: 'Наш офис<br> 115446, г.Москва, Коломенский проезд, д.8, к. 4',
       href: 'https://yandex.ru/maps/org/gk_spetsprodukt/138310307827/?ll=37.649238%2C55.664492&z=17',
     },
     {

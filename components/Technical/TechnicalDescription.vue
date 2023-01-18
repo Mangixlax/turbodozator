@@ -306,7 +306,7 @@ export default class TechnicalTable extends Vue {
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     padding: 16px 0px 32px;
 
     &__container {

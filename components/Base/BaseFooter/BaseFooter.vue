@@ -15,7 +15,7 @@
           </nuxt-link>
         </nav>
         <div :class="$style['footer__left-text']">
-          © {{ getFullYear }} - ТЗД - выбор №1 в сфере пожаробезопаности.
+          © {{ getFullYear }} - ТДЗ - выбор №1 в сфере пожаробезопаности.
         </div>
       </div>
       <div :class="$style['footer__right']">
@@ -80,9 +80,13 @@ export default class BaseFooter extends Vue {
       label: 'Тех. характеристики',
       route: { name: 'index', hash: '#technical' },
     },
+    // {
+    //   label: 'Партнеры',
+    //   route: { name: 'index', hash: '#partners' },
+    // },
     {
-      label: 'Партнеры',
-      route: { name: 'index', hash: '#partners' },
+      label: 'Проектировщикам',
+      route: { name: 'index', hash: '#developers' },
     },
     {
       label: 'Контакты',
@@ -238,7 +242,20 @@ export default class BaseFooter extends Vue {
     }
 
     &__subscribe {
-      margin-bottom: 32px;
+      margin-bottom: 0;
+      max-width: initial;
+    }
+
+    &__right {
+      flex-direction: column-reverse;
+
+      &-decore {
+        width: 100%
+      }
+    }
+
+    &__socials {
+      align-items: flex-start;
     }
   }
 }

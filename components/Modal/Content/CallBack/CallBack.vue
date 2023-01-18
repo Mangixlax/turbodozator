@@ -162,7 +162,7 @@ export default class Contacts extends Vue {
   public contactCards = [
     {
       icon: 'marker',
-      text: 'Московское представительство<br> 115446, г.Москва, Коломенский проезд, д.8, к. 4',
+      text: 'Наш офис<br> 115446, г.Москва, Коломенский проезд, д.8, к. 4',
       href: 'https://yandex.ru/maps/org/gk_spetsprodukt/138310307827/?ll=37.649238%2C55.664492&z=17',
     },
     {

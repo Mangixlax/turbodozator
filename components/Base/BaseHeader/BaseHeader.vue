@@ -102,9 +102,13 @@ export default class BaseHeader extends Vue {
       label: 'Тех. характеристики',
       route: { name: 'index', hash: '#technical' },
     },
+    // {
+    //   label: 'Партнеры',
+    //   route: { name: 'index', hash: '#partners' },
+    // },
     {
-      label: 'Партнеры',
-      route: { name: 'index', hash: '#partners' },
+      label: 'Проектировщикам',
+      route: { name: 'index', hash: '#developers' },
     },
     {
       label: 'Контакты',
@@ -134,14 +138,20 @@ export default class BaseHeader extends Vue {
       iconColor: 'yellow',
       route: { name: 'index', hash: '#technical' },
     },
+    // {
+    //   label: 'Партнеры',
+    //   type: 'link',
+    //   icon: 'contacts',
+    //   iconColor: 'yellow',
+    //   route: { name: 'index', hash: '#partners' },
+    // },
     {
-      label: 'Партнеры',
+      label: 'Проектировщикам',
       type: 'link',
       icon: 'contacts',
       iconColor: 'yellow',
-      route: { name: 'index', hash: '#partners' },
+      route: { name: 'index', hash: '#developers' },
     },
-
     {
       label: 'Контакты',
       type: 'link',

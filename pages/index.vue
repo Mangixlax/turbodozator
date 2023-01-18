@@ -5,7 +5,8 @@
     <technical id="technical" />
     <technical-table />
     <technical-description />
-    <partners id="partners" />
+    <developers id="developers"/>
+    <!-- <partners id="partners" /> -->
     <contacts id="contacts" />
   </main>
 </template>
@@ -22,6 +23,7 @@ import Technical from '~/components/Technical/Technical.vue'
 import TechnicalTable from '~/components/Technical/TechnicalTable.vue'
 import TechnicalDescription from '~/components/Technical/TechnicalDescription.vue'
 import Partners from '~/components/Partners/Partners.vue'
+import Developers from '~/components/Developers/Developers.vue'
 import Contacts from '~/components/Contacts/Contacts.vue'
 
 @Component({
@@ -31,6 +33,7 @@ import Contacts from '~/components/Contacts/Contacts.vue'
     Technical,
     TechnicalTable,
     TechnicalDescription,
+    Developers,
     Partners,
     Contacts,
   },
