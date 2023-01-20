@@ -148,7 +148,7 @@ export default class Developers extends Vue {
       position: absolute;
       bottom: -267px;
       right: -260px;
-      animation: rotation 60s ease infinite;
+      animation: rotation 40s linear infinite;
     }
   }
 
