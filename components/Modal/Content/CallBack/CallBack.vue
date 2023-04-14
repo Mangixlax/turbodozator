@@ -35,7 +35,7 @@
           </span>
         </ui-form-group>
         <ui-form-group tag="label" for="callback-email">
-          <ui-form-label tag="div" required> Ваш Email </ui-form-label>
+          <ui-form-label tag="div"> Ваш Email </ui-form-label>
           <ui-form-input
             placeholder="Ваш e-mail"
             v-model="$v.form.email.$model"
@@ -137,7 +137,6 @@ interface Form {
         minLength: minLength(18),
       },
       email: {
-        required,
         email,
       },
       message: {},

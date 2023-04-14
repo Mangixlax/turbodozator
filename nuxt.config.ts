@@ -86,7 +86,7 @@ export default {
   ],
 
   yandexMetrika: {
-    id: '91588890',
+    id: '93205126',
     clickmap: true,
     trackLinks: true,
     accurateTrackBounce: true,

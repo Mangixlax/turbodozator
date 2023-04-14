@@ -250,7 +250,7 @@ export default class Developers extends Vue {
       }
 
       &-title {
-        margin-bottom: 12px;
+        margin-bottom: 16px;
       }
 
       &-file {
